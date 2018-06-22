@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'NicknameController@welcome');
+Route::get('start', 'NicknameController@start')->name('start.get');
+Route::get('index', 'NicknameController@index')->name('index.get');
+Route::get('histroy', 'NicknameController@history')->name('history.get'); 
