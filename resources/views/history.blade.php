@@ -7,7 +7,14 @@
         </a>
     </ul>
 @foreach($items as $item)
-    <li><div class="history">{{$item->nickname}}<div></li>
+    <li>
+        <div class="history">
+            <div class="timestamp">
+                {{$item->created_at}}
+            </div>    
+                {{$item->nickname}}
+        <div>
+    </li>
 @endforeach
     <ul>
         <a href="{{action('NicknameController@welcome')}}">
