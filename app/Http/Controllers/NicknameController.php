@@ -43,7 +43,8 @@ class NicknameController extends Controller
         $nickname->nickname = $randname;
         $nickname->save();
         
-        return view('index', $data); 
+        Nickname::first()->delete();
+        return view('index', $data);
     }
 
     /**
